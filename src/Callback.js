@@ -13,7 +13,7 @@ const CallbackComponent = () => {
   const [time, setTime] = useState(new Date());
   const [count, setCount] = useState(1);
   useEffect(() => {
-    const timer = setTimeout(setTime(new Date()), 1000);
+    const timer = setTimeout(() => setTime(new Date()), 1000);
     return () => clearTimeout(timer);
   });
 
