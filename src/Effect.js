@@ -4,7 +4,7 @@ const EffectComponent = () => {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    const timer = setTimeout(setTime(new Date()), 1000);
+    const timer = setTimeout(() => setTime(new Date()), 1000);
     return () => clearTimeout(timer);
   });
 
